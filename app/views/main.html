@@ -1,0 +1,72 @@
+<div class="col-md-6">
+  <div class="custom-box-light">
+    <div class="custom-box-header-light">Provide Employee Details</div>
+    <div class="custom-box-content">
+      <input type="text" class="input" placeholder="Name.." ng-model="details.name" autofocus>
+      <input type="text" class="input" placeholder="Position.." ng-model="details.position">
+      <input type="text" class="input" placeholder="Email.." ng-model="details.email">
+      <input type="text" class="input" placeholder="Contact Number.." ng-model="details.number">
+      <input type="text" class="input" placeholder="Skype ID.." ng-model="details.skype">
+    </div>
+    <div class="custom-box-footer">
+      <button class="btn btn-sm btn-primary" ng-click="reset()">
+        <span class="glyphicon glyphicon-refresh"></span>
+        Reset
+      </button>
+    </div>
+  </div>
+</div>
+<div class="col-md-6">
+  <div class="custom-box-light">
+    <div class="custom-box-header-light">
+      Preview
+      <select>
+        <option value="BASIC">Basic</option>
+        <!-- <option value="PROF">Professional</option> -->
+      </select>
+    </div>
+    <div class="custom-box-content">
+      <div class="sign-box" ng-show="!isIncomplete()">
+        <table id="sign-table" style="color: #505050; border-collapse: collapse;">
+          <tr>
+            <td rowspan="5" valign="top" style="padding-right: 5px; border-right: 1px solid #DDD;">
+              <img ng-src="{{remoteImage}}">
+            </td>
+            <td style="padding-left: 10px; font-weight: bold; font-size: 16px;">
+              <span ng-show="details.name">{{ details.name }}</span>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding-left: 10px;">
+              <span ng-show="details.position">{{ details.position + ", Zylun Philippines, Inc." }}</span>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding-left: 10px;">
+              <span ng-show="details.email" ng-bind-html="formatHTML('Email', 'mailto:'+details.email, details.email)"></span>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding-left: 10px;">
+              <span ng-show="details.number">{{ "Contact No.: " + details.number }}</span>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding-left: 10px;">
+              <span ng-show="details.skype" ng-bind-html="formatHTML('Skype', 'skype:'+details.skype+'?add', details.skype)">{{ "Skype: " + details.skype }}</span>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="no-preview" ng-show="isIncomplete()">No preview available</div>
+    <div class="custom-box-footer">
+      <button class="btn btn-sm btn-success" ngclipboard data-clipboard-target="#sign-table" ngclipboard-success="onSuccess(e);" ng-disabled="isIncomplete()">
+        <span class="glyphicon glyphicon-copy"></span>
+        Copy to Clipboard
+      </button>
+    </div>
+  </div>
+  <br>
+  <div class="alert alert-warning"><b>TIP:</b> Click the <b>Copy to Clipboard</b> button and paste it to the signature section under Gmail settings and save.</div>
+</div>
