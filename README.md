@@ -15,7 +15,10 @@ cd signature-generator
 npm install && bower install
 ```
 
-### Run the App ###
+### Run ###
 ```
 node server.js
 ```
+
+### Access ###
+Open your browser and type http://localhost:3000
