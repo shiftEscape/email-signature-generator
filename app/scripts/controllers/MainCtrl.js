@@ -12,6 +12,14 @@ angular
       skype: ""
     };
 
+		$scope.colors = {
+			name: '#505050',
+			position: '#505050',
+			email: '#505050',
+			number: '#505050',
+			skype: '#505050'
+		};
+
     $scope.isIncomplete = function() {
       var missing = 0;
       for(var i in $scope.details) {
