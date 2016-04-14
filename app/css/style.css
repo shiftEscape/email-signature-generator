@@ -34,15 +34,26 @@ div.custom-box-header-light select {
 .custom-box-footer { background: #F5F5F5; border-top: 1px solid #ECECEC; border-radius: 3px; text-align: right; }
 
 .input {
-  width: 100%;
+  width: 93%;
   border: none;
   border-bottom: 1px solid #f0f0f0;
   padding: 3px 5px;
   font-size: 16px;
   margin-bottom: 15px;
   color: #909090;
+	vertical-align: top;
 }
 
 .input:focus { border-bottom: 1px solid #bcbcbc; background: #ffffe2; color: #505050;}
 
 div.no-preview { text-align: center; font-style: italic; margin-bottom: 8px; color: #7d7d7d; }
+.angular-logo { width: 200px; display: inline-block; }
+.copy { display: inline-block; text-align: right; float: right; }
+
+div[colorpicker] {
+	height: 30px;
+	margin-left: 3px;
+	width: 30px;
+	cursor: pointer;
+}
+.inline { display: inline-block; }
