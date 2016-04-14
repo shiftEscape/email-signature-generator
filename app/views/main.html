@@ -3,10 +3,15 @@
     <div class="custom-box-header-light">Provide Employee Details</div>
     <div class="custom-box-content">
       <input type="text" class="input" placeholder="Name.." ng-model="details.name" autofocus>
+			<div title="Pick a color" class="inline" colorpicker ng-model="colors.name" style="background: {{colors.name}}; border: 1px solid {{colors.name}}"></div>
       <input type="text" class="input" placeholder="Position.." ng-model="details.position">
+			<div title="Pick a color" class="inline" colorpicker ng-model="colors.position" style="background: {{colors.position}}; border: 1px solid {{colors.position}}"></div>
       <input type="text" class="input" placeholder="Email.." ng-model="details.email">
+			<div title="Pick a color" class="inline" colorpicker ng-model="colors.email" style="background: {{colors.email}}; border: 1px solid {{colors.email}}"></div>
       <input type="text" class="input" placeholder="Contact Number.." ng-model="details.number">
+			<div title="Pick a color" class="inline" colorpicker ng-model="colors.number" style="background: {{colors.number}}; border: 1px solid {{colors.number}}"></div>
       <input type="text" class="input" placeholder="Skype ID.." ng-model="details.skype">
+			<div title="Pick a color" class="inline" colorpicker ng-model="colors.skype" style="background: {{colors.skype}}; border: 1px solid {{colors.skype}}"></div>
     </div>
     <div class="custom-box-footer">
       <button class="btn btn-sm btn-primary" ng-click="reset()">
@@ -32,27 +37,27 @@
             <td rowspan="5" valign="top" style="padding-right: 5px; border-right: 1px solid #DDD;">
               <img ng-src="{{remoteImage}}">
             </td>
-            <td style="padding-left: 10px; font-weight: bold; font-size: 16px;">
+            <td style="padding-left: 10px; font-weight: bold; font-size: 16px; color: {{colors.name}}">
               <span ng-show="details.name">{{ details.name }}</span>
             </td>
           </tr>
           <tr>
-            <td style="padding-left: 10px;">
+            <td style="padding-left: 10px; color: {{colors.position}}">
               <span ng-show="details.position">{{ details.position + ", Zylun Philippines, Inc." }}</span>
             </td>
           </tr>
           <tr>
-            <td style="padding-left: 10px;">
+            <td style="padding-left: 10px; color: {{colors.email}}">
               <span ng-show="details.email" ng-bind-html="formatHTML('Email', 'mailto:'+details.email, details.email)"></span>
             </td>
           </tr>
           <tr>
-            <td style="padding-left: 10px;">
+            <td style="padding-left: 10px; color: {{colors.number}}">
               <span ng-show="details.number">{{ "Contact No.: " + details.number }}</span>
             </td>
           </tr>
           <tr>
-            <td style="padding-left: 10px;">
+            <td style="padding-left: 10px; color: {{colors.skype}}">
               <span ng-show="details.skype" ng-bind-html="formatHTML('Skype', 'skype:'+details.skype+'?add', details.skype)">{{ "Skype: " + details.skype }}</span>
             </td>
           </tr>
