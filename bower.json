@@ -14,6 +14,7 @@
   ],
   "dependencies": {
     "bootstrap": "^3.3.6",
-    "ngclipboard": "^1.1.1"
+    "ngclipboard": "^1.1.1",
+    "angular-bootstrap-colorpicker": "^3.0.25"
   }
 }
