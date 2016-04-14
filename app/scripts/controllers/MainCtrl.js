@@ -34,6 +34,9 @@ angular
 
     $scope.reset = function() {
       $scope.details = {};
+			for(var i in $scope.colors) {
+				$scope.colors[i] = '#505050';
+			}
     }
 
     $scope.yearCopyright = function() {
