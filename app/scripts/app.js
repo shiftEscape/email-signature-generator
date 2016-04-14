@@ -1,5 +1,5 @@
 angular
-  .module('signGenerator', ['ngRoute', 'ngclipboard'])
+  .module('signGenerator', ['ngRoute', 'ngclipboard', 'colorpicker.module'])
   .config(function($routeProvider) {
     $routeProvider
       .when('/', {
