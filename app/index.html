@@ -7,6 +7,7 @@
   <title>Email Signature Generator - Zylun PH</title>
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="bower_components/angular-bootstrap-colorpicker/css/colorpicker.css">
   <link rel="stylesheet" href="app/css/style.css">
 </head>
 <body ng-app="signGenerator" ng-controller="MainController">
@@ -21,7 +22,10 @@
     <footer>
       <div class="row">
         <hr>
-        <div class="copy" style="text-align: right">
+				<a title="Angular JS" target="_blank" href="https://angularjs.org/">
+					<img class="angular-logo" src="images/angular-js-logo.png">
+				</a>
+        <div class="copy">
           &copy; <span ng-bind="yearCopyright()"></span> <a href="mailto:alvinb@zylun.com">Alvin James Bellero</a> | <a href="mailto:michaelg@zylun.com">Michael Gilos</a>
           <br>
           Email Signature Generator - BETA
@@ -42,6 +46,7 @@
   <!-- Boostrap JS Dependency - added for future use -->
   <script src="bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
+  <script src="bower_components/angular-bootstrap-colorpicker/js/bootstrap-colorpicker-module.js" charset="utf-8"></script>
 
   <!-- APP Scripts -->
   <script src="scripts/app.js" charset="utf-8"></script>
