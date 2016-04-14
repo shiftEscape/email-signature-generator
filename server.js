@@ -12,6 +12,7 @@
 
   app.use('/app',  express.static(__dirname + '/app'));
   app.use('/bower_components',  express.static(__dirname + '/bower_components'));
+	app.set('view engine', 'html');
 
   app.get("*", function(req, res) {
     res.render('/app/index.html');
