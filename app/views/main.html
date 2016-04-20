@@ -2,16 +2,11 @@
   <div class="custom-box-light">
     <div class="custom-box-header-light">Provide Employee Details</div>
     <div class="custom-box-content">
-      <input type="text" class="input" placeholder="Name.." ng-model="details.name" autofocus>
-			<div title="Pick a color" class="inline" colorpicker ng-model="colors.name" style="background: {{colors.name}}; border: 1px solid {{colors.name}}"></div>
-      <input type="text" class="input" placeholder="Position.." ng-model="details.position">
-			<div title="Pick a color" class="inline" colorpicker ng-model="colors.position" style="background: {{colors.position}}; border: 1px solid {{colors.position}}"></div>
-      <input type="text" class="input" placeholder="Email.." ng-model="details.email">
-			<div title="Pick a color" class="inline" colorpicker ng-model="colors.email" style="background: {{colors.email}}; border: 1px solid {{colors.email}}"></div>
-      <input type="text" class="input" placeholder="Contact Number.." ng-model="details.number">
-			<div title="Pick a color" class="inline" colorpicker ng-model="colors.number" style="background: {{colors.number}}; border: 1px solid {{colors.number}}"></div>
-      <input type="text" class="input" placeholder="Skype ID.." ng-model="details.skype">
-			<div title="Pick a color" class="inline" colorpicker ng-model="colors.skype" style="background: {{colors.skype}}; border: 1px solid {{colors.skype}}"></div>
+			<picker-field placeholder="Name.." details="details.name" colors="colors.name"></picker-field>
+			<picker-field placeholder="Position.." details="details.position" colors="colors.position"></picker-field>
+			<picker-field placeholder="Email.." details="details.email" colors="colors.email"></picker-field>
+			<picker-field placeholder="Contact Number.." details="details.number" colors="colors.number"></picker-field>
+			<picker-field placeholder="Skype ID.." details="details.skype" colors="colors.skype"></picker-field>
     </div>
     <div class="custom-box-footer">
       <button class="btn btn-sm btn-primary" ng-click="reset()">
