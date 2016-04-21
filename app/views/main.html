@@ -48,7 +48,7 @@
           </tr>
           <tr>
             <td style="padding-left: 10px; color: {{colors.number}}">
-              <span ng-show="details.number">{{ "Contact No.: " + details.number }}</span>
+              <span ng-show="details.number" ng-bind-html="formatHTML('Contact No.', 'tel:'+details.number, details.number)"></span>
             </td>
           </tr>
           <tr>
