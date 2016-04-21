@@ -26,9 +26,9 @@ angular
 			return (missing == Object.keys($scope.details).length);
 		}
 
-    $scope.formatHTML = function(label, link, content) {
-      return $sce.trustAsHtml(label + ": <a href='"+link+"'>"+content+"</a>");
-    };
+		$scope.formatHTML = function(label, link, content) {
+			return $sce.trustAsHtml(label + ": <a href='"+link+"'>"+content+"</a>");
+		};
 
 		$scope.reset = function() {
 			$scope.details = {};
