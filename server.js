@@ -15,7 +15,7 @@
   app.use('/bower_components',  express.static(__dirname + '/bower_components'));
 
   app.get("*", function(req, res) {
-    res.sendFile('./app/index.html');
+    res.sendFile('/app/index.html');
   });
 
   app.listen(process.env.PORT || PORT, function() {
