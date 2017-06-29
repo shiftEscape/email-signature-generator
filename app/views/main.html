@@ -2,16 +2,16 @@
   <div class="custom-box-light">
     <div class="custom-box-header-light">Provide Employee Details</div>
     <div class="custom-box-content">
-			<picker-field placeholder="Name.." details="details.name" colors="colors.name"></picker-field>
-			<picker-field placeholder="Position.." details="details.position" colors="colors.position"></picker-field>
-			<picker-field placeholder="Email.." details="details.email" colors="colors.email"></picker-field>
-			<picker-field placeholder="Contact Number.." details="details.number" colors="colors.number"></picker-field>
-			<picker-field placeholder="Skype ID.." details="details.skype" colors="colors.skype"></picker-field>
+			<picker-field placeholder="Name" details="details.name" colors="colors.name"></picker-field>
+			<picker-field placeholder="Position" details="details.position" colors="colors.position"></picker-field>
+			<picker-field placeholder="Email ( @codev.com )" details="details.email" colors="colors.email"></picker-field>
+			<picker-field placeholder="Contact Number" details="details.number" colors="colors.number"></picker-field>
+			<picker-field placeholder="Skype ID" details="details.skype" colors="colors.skype"></picker-field>
     </div>
     <div class="custom-box-footer">
       <button class="btn btn-sm btn-primary" ng-click="reset()">
         <span class="glyphicon glyphicon-refresh"></span>
-        Reset Defaults
+        Reset
       </button>
     </div>
   </div>
@@ -38,7 +38,7 @@
           </tr>
           <tr>
             <td style="padding-left: 10px; color: {{colors.position}}">
-              <span ng-show="details.position">{{ details.position + ", Zylun Philippines, Inc." }}</span>
+              <span ng-show="details.position">{{ details.position + ", Codev" }}</span>
             </td>
           </tr>
           <tr>

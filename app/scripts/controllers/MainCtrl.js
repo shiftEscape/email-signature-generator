@@ -14,7 +14,7 @@ angular
 			};
 		}
 
-		$scope.remoteImage = "http://zylun.com/wp-content/uploads/2014/02/logo.png";
+		$scope.remoteImage = "http://codev.com/wp-content/uploads/2017/06/codev-header-logo.png";
 
 		$scope.details = { name: "", position: "", email: "", number: "", skype: "" };
 
@@ -36,8 +36,7 @@ angular
 		}
 
 		$scope.yearCopyright = function() {
-			var d = new Date();
-			return d.getFullYear();
+			return 2016;
 		}
 
 		$scope.onSuccess = function(e) {

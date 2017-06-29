@@ -44,7 +44,7 @@ div.custom-box-header-light select {
 	vertical-align: top;
 }
 
-.input:focus { border-bottom: 1px solid #bcbcbc; background: #ffffe2; color: #505050;}
+.input:focus { border-bottom: 1px solid #bcbcbc; color: #505050;}
 
 div.no-preview { text-align: center; font-style: italic; margin-bottom: 8px; color: #7d7d7d; }
 .angular-logo { width: 200px; display: inline-block; }
@@ -57,3 +57,21 @@ div[colorpicker] {
 	cursor: pointer;
 }
 .inline { display: inline-block; }
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #DDDDDD;
+  font-weight: normal;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #DDDDDD;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #DDDDDD;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #DDDDDD;
+}
+
+input:focus {
+  outline: none;
+}
