@@ -15,10 +15,10 @@
   app.use('/bower_components',  express.static(__dirname + '/bower_components'));
 
   app.get("*", function(req, res) {
-    res.render('/app/index.html');
+    res.sendFile('./app/index.html');
   });
 
-  app.listen(PORT, function() {
+  app.listen(process.env.PORT || PORT, function() {
     console.log(`** Server connected. Listening to port ${PORT} **`);
   });
 
